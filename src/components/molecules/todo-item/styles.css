@@ -1,0 +1,4 @@
+.todo-item[data-completed=true] {
+  /* display: none; */
+  text-decoration: line-through;
+}
