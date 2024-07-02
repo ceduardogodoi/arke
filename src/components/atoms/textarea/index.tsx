@@ -2,12 +2,12 @@ import { forwardRef, type ComponentPropsWithRef } from 'react';
 import { cn } from '../../../utils/cn-merge';
 import './styles.css';
 
-type InputProps = ComponentPropsWithRef<'input'> & {
+type InputProps = ComponentPropsWithRef<'textarea'> & {
   label?: string;
   errorMessage?: string;
 };
 
-export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
+export const TextArea = forwardRef<HTMLTextAreaElement, InputProps>((props, ref) => {
   const { id, label, className, errorMessage, ...rest } = props;
 
   return (
@@ -18,9 +18,9 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
         </label>
       )}
 
-      <input
+      <textarea
         {...rest}
-        className={cn('input-field__input', className)}
+        className={cn('input-field__textarea', className)}
         id={id}
         ref={ref}
       />

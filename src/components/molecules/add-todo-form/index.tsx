@@ -4,7 +4,7 @@ import { useTodoContext } from '../../../contexts/todos/use-todo-context';
 import { z } from 'zod';
 import { Todo } from '../../../models/todo';
 import { Button } from '../../atoms/button';
-import { Input } from '../../atoms/input';
+import { TextArea } from '../../atoms/textarea';
 
 import './styles.css';
 
@@ -49,7 +49,7 @@ export function AddTodo() {
       id="add-todo-form"
       className="add-todo-form"
     >
-      <Input
+      <TextArea
         id="name"
         label="Enter todo:"
         {...register("name")}
