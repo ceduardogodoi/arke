@@ -8,6 +8,11 @@
   justify-content: space-between;
   min-height: 144px;
   padding: 14px 16px;
+  transition: background-color var(--transition-duration-long);
+}
+
+.todo-item[data-completed=true] {
+  background-color: var(--color-green-alpha30);
 }
 
 .todo-item[data-completed=true] .todo-item__name {

@@ -38,12 +38,12 @@ Create an interactive to-do list application using the principles of Atomic Desi
 
 ##### Bonus
 
-Implement local storage functionality to persist tasks even after the page is refreshed.
+[X] Implement local storage functionality to persist tasks even after the page is refreshed.
 
-Add animations or transitions to enhance the user experience.
+[] Add animations or transitions to enhance the user experience.
 
-Allow users to edit task names.
+[X] Allow users to edit task names.
 
-Include lint or style configurations of your choice, such as eslint, stylelint, prettier, or other.
+[] Include lint or style configurations of your choice, such as eslint, stylelint, prettier, or other.
 
-Include unit tests using a testing framework of your choice, such as jest.
+[] Include unit tests using a testing framework of your choice, such as jest.

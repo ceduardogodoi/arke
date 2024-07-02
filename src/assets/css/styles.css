@@ -3,6 +3,7 @@
   --color-blue-400: #5577ff;
 
   --color-green-600: #00b884;
+  --color-green-alpha30: rgba(0, 175, 132, 0.1);
 
   --color-grey-100: #f5fffc;
   --color-grey-200: #e6e4f0;
@@ -40,6 +41,7 @@
 
   /* animations & transitions */
   --transition-duration: 300ms;
+  --transition-duration-long: 600ms;
 }
 
 html {
