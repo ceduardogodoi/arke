@@ -1,4 +1,4 @@
-import { useId } from "react";
+import { useId, useRef, useState } from "react";
 import { useTodoContext } from "../../../contexts/todos/use-todo-context";
 import { Todo } from "../../../models/todo";
 import { Button } from "../../atoms/button";
@@ -27,7 +27,11 @@ export function TodoItem({ todo }: TodoItemProps) {
   }
 
   return (
-    <li key={todo.id} data-completed={todo.completed} className="todo-item">
+    <li
+      key={todo.id}
+      data-completed={todo.completed}
+      className="todo-item"
+    >
       <div className="todo-item__content">
         <Checkbox
           defaultChecked={todo.completed}

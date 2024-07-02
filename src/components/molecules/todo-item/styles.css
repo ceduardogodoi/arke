@@ -1,6 +1,8 @@
 .todo-item {
   background-color: var(--color-blue-50);
-  border: 1px solid var(--color-grey-200);
+  border-color: var(--color-grey-200);
+  border-style: solid;
+  border-width: 1px;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -8,14 +10,16 @@
   justify-content: space-between;
   min-height: 144px;
   padding: 14px 16px;
-  transition: background-color var(--transition-duration-long);
+  transition: background-color var(--transition-duration-long),
+    border-color var(--transition-duration-long);
 }
 
-.todo-item[data-completed=true] {
+.todo-item[data-completed="true"] {
   background-color: var(--color-green-alpha30);
+  border-color: var(--color-green-alpha30);
 }
 
-.todo-item[data-completed=true] .todo-item__name {
+.todo-item[data-completed="true"] .todo-item__name {
   text-decoration: line-through;
 }
 
@@ -34,7 +38,6 @@
 
 .todo-item__name {
   color: var(--color-grey-600);
-  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 20px;
 }
 

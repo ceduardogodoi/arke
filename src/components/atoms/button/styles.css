@@ -6,7 +6,8 @@
   font-size: 16px;
   min-width: 72px;
   padding: 8px 12px;
-  transition: opacity var(--transition-duration);
+  transition: border-color var(--transition-duration),
+    color var(--transition-duration), opacity var(--transition-duration);
 }
 
 .btn:disabled {
@@ -20,22 +21,22 @@
   opacity: var(--global-hover-opacity);
 }
 
-.btn:not(:disabled)[data-action-type=neutral] {
+.btn:not(:disabled)[data-action-type="neutral"] {
   background-color: var(--color-purple-alpha30);
   border-color: var(--color-purple-400);
   color: var(--color-purple-400);
 }
 
-.btn:not(:disabled)[data-action-type=neutral]:focus-visible {
+.btn:not(:disabled)[data-action-type="neutral"]:focus-visible {
   outline: 1px solid var(--color-purple-400);
 }
 
-.btn:not(:disabled)[data-action-type=warn] {
+.btn:not(:disabled)[data-action-type="warn"] {
   background-color: var(--color-magenta-alpha30);
   border-color: var(--color-magenta-400);
   color: var(--color-magenta-400);
 }
 
-.btn:not(:disabled)[data-action-type=warn]:focus-visible {
+.btn:not(:disabled)[data-action-type="warn"]:focus-visible {
   outline: 1px solid var(--color-magenta-400);
 }
