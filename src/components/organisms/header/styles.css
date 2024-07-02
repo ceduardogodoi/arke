@@ -1,8 +1,8 @@
-.page-header {
+.page-header__content {
   align-items: center;
-  border-bottom: 1px solid var(--color-grey-700);
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid var(--color-grey-700);
   padding-bottom: 8px;
 }
 

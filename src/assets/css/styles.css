@@ -27,6 +27,14 @@
   --color-yellow-400: #ffc800;
 
   --color-white: #ffffff;
+
+  /* brands */
+  --color-linkedin: #0e76a8;
+  --color-github: #24292e;
+  --color-instragram: #e1306c;
+
+  --global-padding-inline: 20px;
+  --global-padding-block: 20px;
 }
 
 html {
@@ -43,17 +51,24 @@ body {
   margin: unset;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-  padding-inline: 20px;
-  padding-block-start: 20px;
-  position: relative;
-}
-
 body,
 button,
 input,
 textarea {
   font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* reset */
+ul,
+p {
+  margin: unset;
+  padding: unset;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }

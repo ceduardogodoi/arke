@@ -1,3 +1,55 @@
 .page-footer {
-  background-color: var(--color-grey-200);
+  background-color: var(--color-grey-300);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-block: var(--global-padding-block);
+  padding-inline: var(--global-padding-inline);
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.page-footer__socials,
+.page-footer__legal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.page-footer__socials a,
+.page-footer__legal a {
+  color: var(--color-black);
+  text-decoration: underline;
+}
+
+.page-footer__social a {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.page-footer__social-bg {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  height: 28px;
+  justify-content: center;
+  width: 28px;
+}
+
+.page-footer__social[data-social=linkedin] .page-footer__social-bg {
+  background-color: var(--color-linkedin);
+}
+
+.page-footer__social[data-social=github] .page-footer__social-bg {
+  background-color: var(--color-github);
+}
+
+.page-footer__social[data-social=instagram] .page-footer__social-bg {
+  background-color: var(--color-instragram);
 }

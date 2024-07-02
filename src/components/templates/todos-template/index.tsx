@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react';
 import { Header } from '../../organisms/header';
+import { Footer } from '../../organisms/footer';
 
 import './styles.css';
-import { Footer } from '../../organisms/footer';
 
 export function TodosTemplate({ children }: PropsWithChildren) {
   return (
