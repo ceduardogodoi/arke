@@ -1,3 +1,13 @@
+.page-header {
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 1280px) {
+  .page-header {
+    max-width: 1024px;
+  }
+}
+
 .page-header__content {
   align-items: center;
   display: flex;

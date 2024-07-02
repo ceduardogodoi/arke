@@ -2,6 +2,16 @@
   position: relative;
 }
 
+.page-content {
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 1280px) {
+  .page-content {
+    max-width: 1024px;
+  }
+}
+
 :is(.page-header, .page-content) {
   padding-block-start: var(--global-padding-block);
   padding-inline: var(--global-padding-inline);

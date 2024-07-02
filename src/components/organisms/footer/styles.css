@@ -1,16 +1,27 @@
 .page-footer {
   background-color: var(--color-grey-300);
+}
+
+.page-footer__content {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  margin-inline: auto;
   padding-block: var(--global-padding-block);
   padding-inline: var(--global-padding-inline);
 }
 
 @media screen and (min-width: 768px) {
-  .page-footer {
+  .page-footer__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    max-width: 1024px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .page-footer__content {
+    max-width: 1024px;
   }
 }
 
