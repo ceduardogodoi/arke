@@ -1,0 +1,23 @@
+.link {
+  color: var(--color-black);
+  max-width: fit-content;
+  text-decoration: underline;
+}
+
+.link:visited {
+  color: var(--color-black);
+  text-decoration: underline;
+}
+
+.link:not(:disabled, [data-under-construction=true]):hover {
+  opacity: var(--global-hover-opacity);
+}
+
+.link[data-under-construction=true] {
+  color: var(--color-grey-600);
+  cursor: not-allowed;
+}
+
+:has(> .link):not(:disabled) {
+  transition: opacity var(--transition-duration);
+}
