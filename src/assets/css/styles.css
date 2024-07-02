@@ -28,13 +28,18 @@
 
   --color-white: #ffffff;
 
+  --global-padding-inline: 20px;
+  --global-padding-block: 20px;
+
+  --global-hover-opacity: 0.7;
+
   /* brands */
   --color-linkedin: #0e76a8;
   --color-github: #24292e;
   --color-instragram: #e1306c;
 
-  --global-padding-inline: 20px;
-  --global-padding-block: 20px;
+  /* animations & transitions */
+  --transition-duration: 300ms;
 }
 
 html {

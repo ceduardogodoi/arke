@@ -38,13 +38,13 @@ export function Footer() {
 
       <nav>
         <ul className="page-footer__legal">
-          <li>
+          <li className="page-footer__legal-item">
             <a href="#">Privacy Policy</a>
           </li>
-          <li>
+          <li className="page-footer__legal-item">
             <a href="#">Cookie Settings</a>
           </li>
-          <li>
+          <li className="page-footer__legal-item">
             <a href="#">Contact Us</a>
           </li>
         </ul>

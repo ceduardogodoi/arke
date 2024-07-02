@@ -27,6 +27,16 @@
   text-decoration: underline;
 }
 
+.page-footer__social,
+.page-footer__legal-item {
+  transition: opacity var(--transition-duration);
+}
+
+.page-footer__social:hover,
+.page-footer__legal-item:hover {
+  opacity: var(--global-hover-opacity);
+}
+
 .page-footer__social a {
   align-items: center;
   display: flex;
