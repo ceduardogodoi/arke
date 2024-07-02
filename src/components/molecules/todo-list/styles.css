@@ -1,0 +1,23 @@
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  margin-block: 16px;
+  padding: unset;
+}
+
+@media screen and (min-width: 768px) {
+  .todo-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.todo-list--empty {
+  color: var(--color-grey-600);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  margin: unset;
+  text-align: center;
+}

@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom/client'
 import { App } from './App.tsx'
 import { TodoContextProvider } from './contexts/todos/index.tsx';
 
+import './assets/css/styles.css';
+
 const rootElement = document.querySelector<HTMLDivElement>('#root');
 if (!rootElement) throw new Error('Missing root element.');
 

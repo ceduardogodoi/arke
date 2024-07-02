@@ -1,5 +1,8 @@
+import { useId } from "react";
 import { useTodoContext } from "../../../contexts/todos/use-todo-context";
 import { Todo } from "../../../models/todo";
+import { Button } from "../../atoms/button";
+import { Checkbox } from "../../atoms/checkbox";
 import "./styles.css";
 
 type TodoItemProps = {
@@ -7,6 +10,8 @@ type TodoItemProps = {
 };
 
 export function TodoItem({ todo }: TodoItemProps) {
+  const prefixId = useId();
+
   const { deleteTodo, toggleTodo, editTodo } = useTodoContext();
 
   function handleDeleteTodo() {
@@ -23,26 +28,33 @@ export function TodoItem({ todo }: TodoItemProps) {
 
   return (
     <li key={todo.id} data-completed={todo.completed} className="todo-item">
-      <input
-        type="checkbox"
-        defaultChecked={todo.completed}
-        name={`task-${todo.id}`}
-        onChange={handleToggleTodo}
-      />
-      <span>{todo.name}</span>
-      <span>{todo.completed}</span>
-      <button
-        onClick={handleEditTodo}
-        disabled={todo.completed}
-      >
-        Edit
-      </button>
-      <button
-        onClick={handleDeleteTodo}
-        disabled={todo.completed}
-      >
-        Delete
-      </button>
+      <div className="todo-item__content">
+        <Checkbox
+          defaultChecked={todo.completed}
+          name={`${prefixId}-todo`}
+          onChange={handleToggleTodo}
+        />
+
+        <span className="todo-item__name">{todo.name}</span>
+      </div>
+
+      <footer className="todo-item__actions">
+        <Button
+          data-action-type="edit"
+          onClick={handleEditTodo}
+          disabled={todo.completed}
+        >
+          Edit
+        </Button>
+        <Button
+          variant="warn"
+          data-action-type="delete"
+          onClick={handleDeleteTodo}
+          disabled={todo.completed}
+        >
+          Delete
+        </Button>
+      </footer>
     </li>
   );
 }

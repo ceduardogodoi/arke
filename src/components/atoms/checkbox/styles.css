@@ -1,0 +1,11 @@
+.checkbox-field {
+  accent-color: var(--color-purple-400);
+  display: inline;
+  margin: unset;
+  min-height: 28px;
+  min-width: 28px;
+}
+
+.checkbox-field:focus-visible {
+  outline: 1px solid var(--color-purple-400);
+}

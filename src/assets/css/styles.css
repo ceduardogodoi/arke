@@ -1,0 +1,59 @@
+:root {
+  --color-blue-50: #f9f8ff;
+  --color-blue-400: #5577ff;
+
+  --color-green-600: #00b884;
+
+  --color-grey-100: #f5fffc;
+  --color-grey-200: #e6e4f0;
+  --color-grey-300: #c6c3cd;
+  --color-grey-400: #9896a3;
+  --color-grey-450: #9d9ba1;
+  --color-grey-500: #82808f;
+  --color-grey-600: #4f4f4f;
+  --color-grey-700: #56555c;
+
+  --color-magenta-400: #fd71af;
+  --color-magenta-alpha30: rgba(253, 113, 175, 0.3);
+
+  --color-purple-400: #7b68ee;
+  --color-purple-alpha30: rgba(123, 104, 238, 0.3);
+
+  --color-error-300: #e57373;
+  --color-error-400: #ef5350;
+
+  --color-turquoise-400: #49ccf9;
+
+  --color-yellow-400: #ffc800;
+
+  --color-white: #ffffff;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: unset;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 20px;
+  padding-block-start: 20px;
+  position: relative;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}

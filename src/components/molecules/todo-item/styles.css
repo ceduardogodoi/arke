@@ -1,4 +1,39 @@
-.todo-item[data-completed=true] {
-  /* display: none; */
+.todo-item {
+  background-color: var(--color-blue-50);
+  border: 1px solid var(--color-grey-200);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: space-between;
+  min-height: 144px;
+  padding: 14px 16px;
+}
+
+.todo-item[data-completed=true] .todo-item__name {
   text-decoration: line-through;
+}
+
+.todo-item__content {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+}
+
+.todo-item__checkbox {
+  display: inline;
+  margin: unset;
+  min-height: 28px;
+  min-width: 28px;
+}
+
+.todo-item__name {
+  color: var(--color-grey-600);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+}
+
+.todo-item__actions {
+  display: flex;
+  gap: 16px;
 }

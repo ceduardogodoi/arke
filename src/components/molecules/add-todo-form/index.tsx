@@ -1,11 +1,15 @@
-import { type SubmitHandler, useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useTodoContext } from "../../../contexts/todos/use-todo-context";
-import { z } from "zod";
-import { Todo } from "../../../models/todo";
+import { type SubmitHandler, useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useTodoContext } from '../../../contexts/todos/use-todo-context';
+import { z } from 'zod';
+import { Todo } from '../../../models/todo';
+import { Button } from '../../atoms/button';
+import { Input } from '../../atoms/input';
+
+import './styles.css';
 
 const newTodoSchema = z.object({
-  name: z.string({ required_error: "Todo name is required." }).min(1),
+  name: z.string().min(1, 'Please describe your todo.'),
   id: z.string().optional(),
   completed: z.boolean().optional(),
 });
@@ -13,7 +17,7 @@ const newTodoSchema = z.object({
 export type TodoInput = z.infer<typeof newTodoSchema>;
 
 const initialState: TodoInput = {
-  name: "",
+  name: '',
 };
 
 export function AddTodo() {
@@ -40,16 +44,21 @@ export function AddTodo() {
   }
 
   return (
-    <form onSubmit={handleSubmit(handleUpsertTodo)}>
-      <label style={{ display: "block" }} htmlFor="name">New Todo:</label>
-      <input id="name" type="text" {...register("name")} />
-      {formState.errors.name && (
-        <p>{formState.errors.name.message}</p>
-      )}
+    <form
+      onSubmit={handleSubmit(handleUpsertTodo)}
+      id="add-todo-form"
+      className="add-todo-form"
+    >
+      <Input
+        id="name"
+        label="Enter todo:"
+        {...register("name")}
+        errorMessage={formState.errors.name?.message}
+      />
 
-      <button style={{ display: "block" }} type="submit">
+      <Button type="submit">
         {editingTodo ? "Update todo" : "Add new todo"}
-      </button>
+      </Button>
     </form>
   );
 }
