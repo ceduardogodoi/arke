@@ -15,13 +15,20 @@
   .page-footer__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    max-width: 1024px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .page-footer__content {
+    display: flex;
+    flex-direction: row;
     max-width: 1024px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .page-footer__content {
+    max-width: 1280px;
   }
 }
 
@@ -30,6 +37,15 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  height: 100%;
+}
+
+@media screen and (min-width: 1280px) {
+  .page-footer__socials,
+  .page-footer__legal {
+    align-items: center;
+    flex-direction: row;
+  }
 }
 
 .page-footer__social .link {
@@ -57,4 +73,12 @@
 
 .page-footer__social[data-social=instagram] .page-footer__social-bg {
   background-color: var(--color-instragram);
+}
+
+@media screen and (min-width: 1280px) {
+  .page-footer__copyright {
+    align-items: center;
+    display: flex;
+    margin-inline-start: auto;
+  }
 }
