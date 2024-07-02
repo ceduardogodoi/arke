@@ -8,9 +8,13 @@ export function TodoList() {
 
   if (todos.length < 1) {
     return (
-      <p className="todo-list--empty">
-        Start by adding a new todo.
-      </p>
+      <div className="todo-list__content">
+        <p className="todo-list--empty">
+          No todos registered yet.
+          <br />
+          Start by adding a new todo.
+        </p>
+      </div>
     );
   }
 

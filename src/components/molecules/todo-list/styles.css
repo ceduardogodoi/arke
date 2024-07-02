@@ -14,6 +14,10 @@
   }
 }
 
+.todo-list__content {
+  padding-block: 64px;
+}
+
 .todo-list--empty {
   color: var(--color-grey-600);
   font-family: 'Plus Jakarta Sans', sans-serif;
