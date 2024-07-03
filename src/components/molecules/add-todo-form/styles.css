@@ -1,7 +1,7 @@
 .add-todo-form {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .add-todo-form .input-field__textarea {

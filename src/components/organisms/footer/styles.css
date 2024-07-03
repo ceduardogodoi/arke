@@ -5,7 +5,7 @@
 .page-footer__content {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 2rem;
   margin-inline: auto;
   padding-block: var(--global-padding-block);
   padding-inline: var(--global-padding-inline);
@@ -22,13 +22,13 @@
   .page-footer__content {
     display: flex;
     flex-direction: row;
-    max-width: 1024px;
+    max-width: var(--screen-laptop);
   }
 }
 
 @media screen and (min-width: 1920px) {
   .page-footer__content {
-    max-width: 1280px;
+    max-width: var(--screen-desktop);
   }
 }
 
@@ -36,7 +36,7 @@
 .page-footer__legal {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
   height: 100%;
 }
 
@@ -51,16 +51,16 @@
 .page-footer__social .link {
   align-items: center;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .page-footer__social-bg {
   align-items: center;
   border-radius: 50%;
   display: flex;
-  height: 28px;
+  height: 1.5rem;
   justify-content: center;
-  width: 28px;
+  width: 1.5rem;
 }
 
 .page-footer__social[data-social=linkedin] .page-footer__social-bg {
