@@ -1,9 +1,10 @@
-import { useId, useRef, useState } from "react";
-import { useTodoContext } from "../../../contexts/todos/use-todo-context";
-import { Todo } from "../../../models/todo";
-import { Button } from "../../atoms/button";
-import { Checkbox } from "../../atoms/checkbox";
-import "./styles.css";
+import { useId } from 'react';
+import { useTodoContext } from '../../../contexts/todos/use-todo-context';
+import { Todo } from '../../../models/todo';
+import { Button } from '../../atoms/button';
+import { Checkbox } from '../../atoms/checkbox';
+
+import './styles.css';
 
 type TodoItemProps = {
   todo: Todo;
