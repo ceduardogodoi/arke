@@ -9,6 +9,7 @@ type TodoContextActions = {
   deleteTodo: (todoId: string) => void;
   editTodo: (todoId: string) => void;
   updateTodo: (todo: Todo) => void;
+  toggleShowCompleted: (showCompleted: boolean) => void;
 };
 
 export type TodoContextType = TodoContextState & TodoContextActions;

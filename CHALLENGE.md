@@ -8,21 +8,21 @@ Create an interactive to-do list application using the principles of Atomic Desi
 
 #### Requirements
 
-[ ] Implement the Atomic Design methodology in structuring your project. Divide the application into atoms, molecules, organisms, templates, and pages.
+[X] Implement the Atomic Design methodology in structuring your project. Divide the application into atoms, molecules, organisms, templates, and pages.
 
 [X] Create a TypeScript interface for the task object, defining properties such as id, name, and completed.
 
-[ ] Design and style the application using CSS, focusing on Atomic Design principles. Consider the styling for atoms (e.g., buttons, input fields), molecules (e.g., task item), and organisms (e.g., task list).
+[X] Design and style the application using CSS, focusing on Atomic Design principles. Consider the styling for atoms (e.g., buttons, input fields), molecules (e.g., task item), and organisms (e.g., task list).
 
-[ ] Include an input field to add new tasks.
+[X] Include an input field to add new tasks.
 
-[ ] Display a list of tasks with checkboxes to mark them as completed.
+[X] Display a list of tasks with checkboxes to mark them as completed.
 
-[ ] Implement functionality to remove completed tasks.
+[X] Implement functionality to remove completed tasks.
 
-[ ] Apply TypeScript for handling the logic of adding, marking as completed, and removing tasks.
+[X] Apply TypeScript for handling the logic of adding, marking as completed, and removing tasks.
 
-[ ] Ensure that TypeScript types are used consistently throughout the application.
+[X] Ensure that TypeScript types are used consistently throughout the application.
 
 ##### Implementation
 
@@ -40,7 +40,7 @@ Create an interactive to-do list application using the principles of Atomic Desi
 
 [X] Implement local storage functionality to persist tasks even after the page is refreshed.
 
-[] Add animations or transitions to enhance the user experience.
+[X] Add animations or transitions to enhance the user experience.
 
 [X] Allow users to edit task names.
 

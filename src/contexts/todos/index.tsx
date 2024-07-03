@@ -6,7 +6,8 @@ import { TodoContext, TodoContextType } from './use-todo-context';
 
 // localStorage
 enum ArkeKeys {
-  ARKE_TODOS = "arke/todos",
+  ARKE_TODOS = 'arke/todos',
+  ARKE_SHOW_COMPLETED = 'arke/show_completed',
 }
 
 function loadFromLocalStorage(): Todo[] {
@@ -63,12 +64,32 @@ function updateTodoToLocalStorage(updatedTodo: Todo): void {
   setTodosToLocalStorage(updatedTodos);
 }
 
+function loadShowCompletedPreferencesFromStorage(): boolean {
+  const item = localStorage.getItem(ArkeKeys.ARKE_SHOW_COMPLETED);
+  let preference = false;
+
+  if (item != null) {
+    preference = JSON.parse(item);
+  }
+
+  return preference;
+}
+
+function updateShowCompletedPreference(showCompleted: boolean) {
+  localStorage.setItem(ArkeKeys.ARKE_SHOW_COMPLETED, JSON.stringify(showCompleted));
+}
+
 export function TodoContextProvider({ children }: PropsWithChildren) {
   const [state, dispatch] = useReducer(todoReducer, initialState);
 
   useEffect(() => {
     const todos = loadFromLocalStorage();
     dispatch(todosActionCreators.setTodos(todos));
+  }, []);
+
+  useEffect(() => {
+    const showCompleted = loadShowCompletedPreferencesFromStorage();
+    dispatch(todosActionCreators.toggleShowCompleted(showCompleted));
   }, []);
 
   function addTodo(todo: TodoInput) {
@@ -101,17 +122,24 @@ export function TodoContextProvider({ children }: PropsWithChildren) {
     dispatch(todosActionCreators.updateTodo(todo));
   }
 
+  function toggleShowCompleted(showCompleted: boolean) {
+    updateShowCompletedPreference(showCompleted);
+    dispatch(todosActionCreators.toggleShowCompleted(showCompleted));
+  }
+
   const value = useMemo<TodoContextType>(() => {
     return {
       todos: state.todos,
       editingTodo: state.editingTodo,
+      showCompleted: state.showCompleted,
       addTodo,
       toggleTodo,
       deleteTodo,
       editTodo,
       updateTodo,
+      toggleShowCompleted
     };
-  }, [state.editingTodo, state.todos]);
+  }, [state.editingTodo, state.showCompleted, state.todos]);
 
   return (
     <TodoContext.Provider value={value}>

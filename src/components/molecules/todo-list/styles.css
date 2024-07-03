@@ -14,13 +14,20 @@
   }
 }
 
-.todo-list__content {
+.todo-list__show-completed-form {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  margin-block-start: 16px;
+}
+
+.todo-list__content[data-empty="true"] {
   padding-block: 64px;
 }
 
 .todo-list--empty {
   color: var(--color-grey-600);
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 20px;
   margin: unset;
   text-align: center;

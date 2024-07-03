@@ -4,6 +4,7 @@ import { TodosAction } from "./todo-reducer";
 export type TodoContextState = {
   todos: Todo[];
   editingTodo?: Todo;
+  showCompleted: boolean;
 };
 
 export type TodoActionTypes =
@@ -30,4 +31,8 @@ export type TodoActionTypes =
   | {
       type: TodosAction.TODOS_UPDATE_EDITING_TODO;
       payload: Todo;
+    }
+  | {
+      type: TodosAction.TODOS_TOGGLE_SHOW_COMPLETED;
+      payload: boolean;
     };
