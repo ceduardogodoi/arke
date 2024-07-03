@@ -26,13 +26,13 @@ Create an interactive to-do list application using the principles of Atomic Desi
 
 ##### Implementation
 
-[ ] Use Atomic Design principles to organize your project structure.
+[X] Use Atomic Design principles to organize your project structure.
 
-[ ] Utilize TypeScript for type safety and maintainability.
+[X] Utilize TypeScript for type safety and maintainability.
 
-[ ] Implement CSS for styling based on the principles of Atomic Design.
+[X] Implement CSS for styling based on the principles of Atomic Design.
 
-[ ] Make the application responsive and visually appealing.
+[X] Make the application responsive and visually appealing.
 
 [ ] Include a README file explaining the Atomic Design choices made during development and any other relevant considerations.
 
@@ -46,4 +46,4 @@ Create an interactive to-do list application using the principles of Atomic Desi
 
 [] Include lint or style configurations of your choice, such as eslint, stylelint, prettier, or other.
 
-[] Include unit tests using a testing framework of your choice, such as jest.
+[X] Include unit tests using a testing framework of your choice, such as jest.
