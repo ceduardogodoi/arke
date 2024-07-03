@@ -20,7 +20,7 @@ const initialState: TodoInput = {
   name: '',
 };
 
-export function AddTodo() {
+export function AddTodoForm() {
   const { addTodo, editingTodo, updateTodo } = useTodoContext();
 
   const { register, handleSubmit, formState, reset } = useForm<TodoInput>({

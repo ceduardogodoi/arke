@@ -13,6 +13,7 @@ export function Link({ className, children, target, href, ...rest }: LinkProps) 
   return (
     <a
       {...rest}
+      href={href}
       target={target}
       className={cn('link', className)}
       data-under-construction={underConstruction}
