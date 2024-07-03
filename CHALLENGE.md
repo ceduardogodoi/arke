@@ -34,7 +34,7 @@ Create an interactive to-do list application using the principles of Atomic Desi
 
 [X] Make the application responsive and visually appealing.
 
-[ ] Include a README file explaining the Atomic Design choices made during development and any other relevant considerations.
+[X] Include a README file explaining the Atomic Design choices made during development and any other relevant considerations.
 
 ##### Bonus
 
